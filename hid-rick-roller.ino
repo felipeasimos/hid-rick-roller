@@ -15,6 +15,7 @@ void write(const char* msg) {
 void setup() {
 
   // lights on -> script running
+  digitalWrite(0, HIGH);
   digitalWrite(1, HIGH);
 
   // add some delay to avoid probles
@@ -32,6 +33,7 @@ void setup() {
 
   // lights off -> script has ended
   digitalWrite(1, LOW);
+  digitalWrite(0, LOW);
 }
 
 void loop() {
