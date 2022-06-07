@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
-ENV ARDUINO_CLI_VERSION 0.21.1
+ENV ARDUINO_CLI_VERSION 0.23.0
 ENV ARDUINO_CLI_ARCH Linux_64bit
-ENV ARDUINO_CLI_SHA256 068f0a69ffecd5688e0b4bc02609720af57ec1aa60e5ea6a2879af3ed1dc0d9b
+ENV ARDUINO_CLI_SHA256 c3f1c333532a989db392f6dd7df2a111bd55d86188c3b729e85d6e93055ca797
 ENV ARDUINO_CLI_URL https://github.com/arduino/arduino-cli/releases/download/${ARDUINO_CLI_VERSION}/arduino-cli_${ARDUINO_CLI_VERSION}_${ARDUINO_CLI_ARCH}.tar.gz
 ENV ARDUINO_CLI_DIGISTUMP_INDEX https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json 
 
